@@ -322,21 +322,22 @@ footer .blue-button{
 
 /* Top10 */
 #top-10{
+    width
     display: flex;
     justify-content: space-evenly;
 }
 .top-10-col{
+    width: 45%;
     display: flex;
     flex-direction: column;
-}
-#top-10 h4{
-    margin-bottom: 30px;
 }
 .item-music{
     display: flex;
     flex-direction: row;
     gap: 5px;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .number{
     font-family: UrbanistBold;
@@ -347,6 +348,7 @@ footer .blue-button{
     width: 60px;
 }
 .info-music{
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -357,13 +359,21 @@ footer .blue-button{
     color: white;
 }
 .artist-music{
-
+    color: #3bc8e7;
+    font-size: 14px;
+    font-family: UrbanistLight;
+    letter-spacing: 1px;
 }
 .duration{
-
+    color: #F0F5F9;
+    font-size: 14px;
+    font-family: UrbanistLight;
+    letter-spacing: 1px;
 }
 .white-line{
-    
+    width: 100%;
+    height: 1px;
+    background-color: #C4C4C4;
 }
 /* Eléments courrants*/
 
