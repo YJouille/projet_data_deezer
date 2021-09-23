@@ -79,9 +79,7 @@
             </div>
         </div>
         <div id="top-10">
-            <div class="top-10-col">
-<<<<<<< HEAD
-=======
+            <div id="top-10-tracks" class="top-10-col">
                 <h4><span class="lightblue">Top 10 </span> des morceaux les plus écoutés</h4>
                 <div class="item-music">
                     <p class="number">01</p>
@@ -126,7 +124,6 @@
                 <!-- FINTEST -->
             </div>
             <div class="top-10-col">
->>>>>>> 2c4f17e08a94da59d96bfd7cbe916caf86004f66
                 <h4><span>Top 10 </span> des morceaux les plus écoutés</h4>
                 <div class="item-music">
                     <p>01</p>
@@ -168,10 +165,7 @@
                     <p class="duration">00:00</p>
                     <div class ="white-line"></div>
                 </div>
-<<<<<<< HEAD
-=======
                 <!-- FINTEST -->
->>>>>>> 2c4f17e08a94da59d96bfd7cbe916caf86004f66
             </div>
         </div>
         <div class="artist-of-moment">
@@ -241,6 +235,6 @@
 
     </div>
 
-    <!-- <script src="scrypt.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>
