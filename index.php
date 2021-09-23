@@ -79,7 +79,7 @@
             </div>
         </div>
         <div id="top-10">
-            <dic class="top-10-col">
+            <div class="top-10-col">
                 <h4><span>Top 10 </span> des morceaux les plus écoutés</h4>
                 <div class="item-music">
                     <p>01</p>
@@ -91,7 +91,7 @@
                     <p class="duration">00:00</p>
                     <div>white-line</div>
                 </div>
-            </dic>
+            </div>
         </div>
         <div class="artist-of-moment">
 
