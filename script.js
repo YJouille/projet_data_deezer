@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Declaration variables
 
 const url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/tracks";
@@ -73,3 +74,33 @@ function getTop10Tracks() {
 }
 
 getTop10Tracks();
+=======
+const slider = document.querySelector('.carousel');
+console.log(slider)
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk/2;
+  console.log(walk);
+});
+>>>>>>> ae9ad4f3805d7106ae45a57979619de1727bd8c6
