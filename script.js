@@ -10,24 +10,17 @@ requete.onload = function(){
         if(requete.status === 200){
             let reponse = requete.response;
             console.log(reponse);
-            for (let i=0;i<reponse.length;i++) {
-
-
-                // let article = document.createElement("div");
-                // let title = document.createElement("h2");
-                // let content = document.createElement("p");
-                // article.className= "col";
-                // title.innerHTML=reponse[index].title;
-                // content.innerHTML=reponse[index].body;
-                // article.appendChild(title);
-                // article.appendChild(content);
-                // document.getElementById("articles").appendChild(article);
+            for (let i=1;i<reponse.data.length;i++) {
+                let name=reponse.data[i].name;
+                let picture=reponse.data[i].picture;
+                let itemKind=document.cre
             }
         } else {
             alert ("Un problème est survenu merci de revenir plus tard");
         }
     }
-} 
+}
+
 const slider = document.querySelector('.carousel');
 console.log(slider)
 let isDown = false;

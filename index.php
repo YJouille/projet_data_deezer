@@ -104,6 +104,7 @@
                 </div>
             </div>
         </div>
+
         <div id="top-10">
             <div class="top-10-col">
                 <h4><span class="lightblue">Top 10 </span> des morceaux les plus écoutés</h4>
@@ -149,6 +150,7 @@
                 </div>
                 <!-- FINTEST -->
             </div>
+
             <div class="top-10-col">
                 <h4><span>Top 10 </span> des morceaux les plus écoutés</h4>
                 <div class="item-music">
@@ -194,6 +196,7 @@
                 <!-- FINTEST -->
             </div>
         </div>
+        
         <div id="artist-of-moment">
             <div class="player-artist">
                 <div class="blue-circle">
