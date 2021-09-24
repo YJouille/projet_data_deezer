@@ -118,50 +118,20 @@
                 </div>
             </div>
             <div class="top-10-col">
-                <h4><span>Top 10 </span> des albums les plus écoutés</h4>
+                <h4><span class="lightblue">Top 10 </span> des albums les plus écoutés</h4>
                 <div id="top-10-albums">
-                <!--Sample of track item-->
-                <div class="item-music">
-                    <p>01</p>
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                    <div class="info-music">
-                        <p class="title-music">Bad Habbits</p>
-                        <p class="artist-music">Ed Sheeran</p>
-                    </div>
-                    <p class="duration">00:00</p>
-                    <div class="white-line"></div>
+                    <!--Sample of album item-->
+                    <!-- <div class="item-music">
+                            <p class="number">01</p>
+                            <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
+                            <div class="info-music">
+                                <p class="title-music">Bad Habbits</p>
+                                <p class="artist-music">Ed Sheeran</p>
+                            </div>
+                            <p class="duration">00:00</p>
+                            <div class ="white-line"></div>
+                         </div> -->    
                 </div>
-                <div class="item-music">
-                    <p>02</p>
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                    <div class="info-music">
-                        <p class="title-music">Bad Habbits</p>
-                        <p class="artist-music">Ed Sheeran</p>
-                    </div>
-                    <p class="duration">00:00</p>
-                    <div class="white-line"></div>
-                </div>
-                <div class="item-music">
-                    <p>03</p>
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                    <div class="info-music">
-                        <p class="title-music">Bad Habbits</p>
-                        <p class="artist-music">Ed Sheeran</p>
-                    </div>
-                    <p class="duration">00:00</p>
-                    <div class="white-line"></div>
-                </div>
-                <div class="item-music">
-                    <p>01</p>
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                    <div class="info-music">
-                        <p class="title-music">Bad Habbits</p>
-                        <p class="artist-music">Ed Sheeran</p>
-                    </div>
-                    <p class="duration">00:00</p>
-                    <div class="white-line"></div>
-                </div>
-                <!-- FINTEST -->
             </div>
         </div>
         <div id="artist-of-moment">
@@ -176,7 +146,7 @@
 
         </div>
         <div id="podcast">
-            
+
         </div>
 
     </main>
