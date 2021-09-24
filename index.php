@@ -40,7 +40,7 @@
                 <div id="div-research">
                     <input type="text" value="Recherchez, écoutez...">
                     <div class="blue-square">
-                        <img class="icon" src="icones/helmet.svg" alt="Icon helmet">
+                        <img class="icon" src="icons/helmet.svg" alt="Icon helmet">
                     </div>
                 </div>
                 <div id="identify">
@@ -82,6 +82,28 @@
             </div>
         </div>
         
+                <div class="item-kind">
+                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
+                    <p class="title-kind">PoP</p>
+                </div>
+                <div class="item-kind">
+                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
+                    <p class="title-kind">PoP</p>
+                </div>
+                <div class="item-kind">
+                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
+                    <p class="title-kind">PoP</p>
+                </div>
+                <div class="item-kind">
+                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
+                    <p class="title-kind">PoP</p>
+                </div>
+                <div class="item-kind">
+                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
+                    <p class="title-kind">PoP</p>
+                </div>
+            </div>
+        </div>
         <div id="top-10">
             <div class="top-10-col">
                 <h4><span class="lightblue">Top 10 </span> des morceaux les plus écoutés</h4>
@@ -172,13 +194,20 @@
                 <!-- FINTEST -->
             </div>
         </div>
-        <div class="artist-of-moment">
-
+        <div id="artist-of-moment">
+            <div class="player-artist">
+                <div class="blue-circle">
+                    <img class="icon-play" src="icons/play.svg" alt="icon play-pause">
+                </div>
+                <h2>Découvrez l'artiste du moment <br> NINHO</h2>
+            </div>
         </div>
         <div id="playlist">
 
         </div>
-        <div id="podcast"></div>
+        <div id="podcast">
+            
+        </div>
 
     </main>
 
@@ -217,7 +246,7 @@
             <p>Vous souhaitez nous contacter.<br>Plusieurs solutions s'offrent à vous</p>
             <div class="flex-row-none">
                 <div class="blue-square-footer">
-                    <img src="icones/phone-call-outline.svg" alt="icon phone">
+                    <img src="icons/phone-call-outline.svg" alt="icon phone">
                 </div>
                 <div>
                     <p>Par téléphone au :</p>
@@ -226,7 +255,7 @@
             </div>
             <div class="flex-row-none margin-bot">
                 <div class="blue-square-footer">
-                    <img src="icones/mail-open.svg" alt="icon letter">
+                    <img src="icons/mail-open.svg" alt="icon letter">
                 </div>
                 <div>
                     <p>Par email au :</p>
@@ -239,6 +268,6 @@
 
     </div>
 
-    <!-- <script src="scrypt.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>
