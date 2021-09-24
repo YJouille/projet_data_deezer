@@ -1,0 +1,432 @@
+/* Eléments généraux */
+html{
+    background-color: #0b5b6d;
+    align-items: center;
+
+}
+body{
+    max-width: 1440px;
+    color: white;
+    margin: auto;
+
+}
+header{
+ margin: 0px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+nav{
+    color: #3bc8e7;
+    background-color: white;
+}
+#nav-left{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    width: 40%;
+    grid-row-gap: 70px;
+}
+#nav-right{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 40%;
+    grid-row-gap: 70px;
+}
+#header-main{
+    height: 802px;
+    background: url("images/accueil-nana.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#btn-menu-burger{
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3bc8e7;
+}
+#menu-burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.long-line-burger{
+    height: 2px;
+    width: 18px;
+    margin-bottom: 3px;
+    background-color: white;
+}
+.short-line-burger{
+    height: 2px;
+    width: 13px;
+    background-color: white;
+}
+
+
+.btn-logo-appli{
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.logo-appli{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line-sound-1, .line-sound-2, .line-sound-3, .line-sound-4, .line-sound-5, .line-sound-6, .line-sound-7{
+    width: 2px;
+    margin-right: 1px;
+    background-color: #3bc8e7;
+}
+.line-sound-1{height: 6px;}
+.line-sound-2{height: 14px;}
+.line-sound-3{height: 26px;}
+.line-sound-4{height: 8px;}
+.line-sound-5{height: 14px;}
+.line-sound-6{height: 18px;}
+.line-sound-7{height: 4px;}
+.short-line-burger{
+    height: 2px;
+    width: 13px;
+    margin-bottom: 2px;
+    background-color: white;
+}
+.blue-title{
+    font-family: UrbanistBold;
+}
+.blue-sub-title{
+    font-family: UrbanistLight;
+}
+#div-research{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: #F0F5F9;
+    height: 40px;
+    width: 300px;
+
+}
+#div-research input{
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    color: #3bc8e7;
+    font-family: Urbanist;
+    background-color: #F0F5F9;
+    border: none;
+    width: 80%;
+    height:90%;
+}
+
+.blue-square{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 29px;
+    width: 29px;
+    background-color: #3bc8e7;
+    border-radius: 10%;
+}
+
+#identify{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#identify img{
+    height: 31px;
+    width: 31px;
+    border-radius: 100%;
+}
+
+#header-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#container-title{
+    margin-left: 6%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-family: OpenSans;
+    width: 50%;
+}
+#container-title p{
+    line-height: 25px;
+    font-size: 16px;
+    color: #F0F5F9;
+    margin-bottom: 20px;
+}
+
+.blue-button{
+    text-transform: uppercase;
+    font-family: OpenSansBold;
+    font-size: 14px;
+    width: 33%;
+    height: 40px;
+}
+#container-title  div button{
+    background-color: #3bc8e7;
+}
+#container-title div button + button{
+    background-color: #3bc7e700;
+    border: solid 3px #3bc8e7;
+    margin-left: 4px;
+}
+
+h1{
+    font-size: 96px;
+    font-family: UrbanistBlack;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.icon{
+    margin-top: 6px;
+    margin-right: 0.5px;
+    width: 22px;
+}
+div{
+    /* border: solid 1px red; */
+}
+p{
+    margin: 0px;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 300px;
+    color: white;
+    font-family: Urbanist;
+    background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
+    padding-bottom: 60px;
+    font-size: 14px;
+}
+.footer-col{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer :is(.line-sound-1, .line-sound-2, .line-sound-3, .line-sound-4, .line-sound-5, .line-sound-6, .line-sound-7){
+    background-color: white;
+}
+
+footer .btn-logo-appli{
+    background-color: #3bc7e700;
+    align-items: start;
+    width: 40px;
+}
+h4{
+    font-size: 18px;
+    font-family: UrbanistBlack;
+    color: white;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+
+footer .blue-sub-title{
+    color: #F0F5F9;
+}
+
+.footer-col input{
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    color: #3bc8e7;
+    font-family: Urbanist;
+    background-color: #F0F5F9;
+    border: none;
+    width: 100%;
+    height:36px;
+    padding-left: 20px;
+
+}
+
+footer .blue-button{
+    background-color: #3bc8e7;
+    width: 60%;
+}
+.clickable-line{
+    color: #3bc8e7;
+    font-family: UrbanistBold;
+    font-size: 14px;
+}
+.blue-square-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: #3bc8e7;
+    margin-right: 10px;
+}
+.margin-bot{
+    margin-bottom: 60px;
+}
+
+#lecteur{
+    width: 100%;
+    height: 75px;
+    background-color: #111013;
+}
+
+
+/* KIND */
+#kind{
+    padding-left: 90px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* width: 100%; */
+    background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
+}
+.carousel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    margin-top: 30px;
+}
+.item-kind{
+    width: 184px;
+    height: 230px;
+}
+.img-kind{
+    width: 184px;
+}
+.title-kind{
+    font-family: UrbanistBold;
+    font-size: 14px;
+    color: white;
+}
+
+/* Top10 */
+#top-10{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
+
+}
+.top-10-col{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.item-music{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.number{
+    font-family: UrbanistBold;
+    font-size: 14px;
+    color: white;
+}
+.img-music{
+    width: 60px;
+}
+.info-music{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.title-music{
+    font-family: UrbanistBold;
+    font-size: 14px;
+    color: white;
+}
+.artist-music{
+    color: #3bc8e7;
+    font-size: 14px;
+    font-family: UrbanistLight;
+    letter-spacing: 1px;
+}
+.duration{
+    color: #F0F5F9;
+    font-size: 14px;
+    font-family: UrbanistLight;
+    letter-spacing: 1px;
+}
+.white-line{
+    width: 100%;
+    height: 1px;
+    background-color: #C4C4C4;
+}
+/* Eléments courrants*/
+
+
+/* Classes et id*/
+.lightblue{
+    color: #3bc8e7;
+}
+/* Remove style */
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.flex-row{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.flex-row-none{
+    display: flex;
+    align-items: center;
+    row-gap: 15px;
+}
+
+
+@font-face {
+    font-family: UrbanistBold;
+    src: url(fonts/urbanist/static/Urbanist-Bold.ttf);
+}
+@font-face {
+    font-family: Urbanist;
+    src: url(fonts/urbanist/static/Urbanist-Regular.ttf);
+}
+@font-face {
+    font-family: UrbanistBlack;
+    src: url(fonts/urbanist/static/Urbanist-Black.ttf);
+}
+@font-face {
+    font-family: UrbanistLight;
+    src: url(fonts/urbanist/static/Urbanist-Light.ttf);
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: OpenSansBold;
+    src: url(fonts/OpenSans-Bold.ttf);
+}
