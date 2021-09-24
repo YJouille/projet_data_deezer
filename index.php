@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div id="nav-title">
-                    <p class="blue-title">Music Band</p>
+                    <p class="blue-title">Music&#xA0;Band</p>
                     <p class="blue-sub-title">La musique au bout des doigts</p>
                 </div>
             </div>
@@ -50,7 +50,7 @@
         </nav>
         <div id="header-main">
             <div id="container-title">
-                <h1><span class="lightblue">Music</span> Band</h1>
+                <h1><span class="lightblue">Music</span>&#xA0;Band</h1>
                 <p>Votre musique sans pub, partout. Seulement 9,99 €/mois ensuite.<br> Soumis à conditions. Des podcasts exclusifs.<br> Des playlists sur-mesure. Faites des découvertes.<br> Zappez à volonté. Plus de 50 M de chansons.<br> Annulation à tout moment.
                 </p>
                 <div>
@@ -144,7 +144,7 @@
                 <!-- FINTEST -->
             </div>
             <div class="top-10-col">
-                <h4><span>Top 10 </span> des morceaux les plus écoutés</h4>
+                <h4><span class=lightblue>Top 10 </span> des albums les plus écoutés</h4>
                 <div class="item-music">
                     <p>01</p>
                     <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
@@ -197,10 +197,23 @@
             </div>
         </div>
         <div id="playlist">
-
+            <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
+            <div class="carousel">
+                <!-- Pareil que genre kind -->
+            </div>
         </div>
         <div id="podcast">
-            
+            <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
+            <div class="carousel">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+            </div>
         </div>
 
     </main>
