@@ -168,12 +168,12 @@
             </div>
         </div>
         <div id="artist-of-moment">
-            <div class="player-artist">
+            <!-- <div class="player-artist">
                 <div class="blue-circle">
                     <img class="icon-play" src="icons/play.svg" alt="icon play-pause">
                 </div>
                 <h2>Découvrez l'artiste du moment <br> NINHO</h2>
-            </div>
+            </div> -->
         </div>
         <div id="playlist">
             <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
