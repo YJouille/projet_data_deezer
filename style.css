@@ -353,6 +353,14 @@ footer .blue-button{
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    transition: 500ms ease-in-out;
+}
+
+.item-music:hover{
+    /* padding: 10px; */
+    padding-left: 20px;
+
+    /* background-color: red; */
 }
 .number{
     font-family: UrbanistBold;
@@ -488,6 +496,7 @@ button, input[type="submit"], input[type="reset"] {
     align-items: center;
     row-gap: 15px;
 }
+
 
 @media screen and (max-width:1024px){
     .blue-sub-title{
