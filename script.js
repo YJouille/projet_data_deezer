@@ -1,4 +1,4 @@
-// Top 10 tracks and top 10 albums
+/*************** Top 10 tracks and top 10 albums ***************/
 // Declaration variables
 const urlTracks = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/tracks";
 const urlAlbums = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/albums";
@@ -20,6 +20,7 @@ function generateItem(number, imgSrc, titleMusic, titleArtist, duration, divPare
     let img = document.createElement("img");
     img.className = "img-music";
     img.src = imgSrc;
+    img.alt = "vignette top10";
     item.appendChild(img);
 
     let info = document.createElement("div");
@@ -118,6 +119,62 @@ function getTop10Albums(url) {
 //Appel des fonctions
 getTop10Tracks(urlTracks);
 getTop10Albums(urlAlbums);
+/*************** End Top 10 tracks and top 10 albums ***************/
+
+
+/*************** Artist of the moment ***************/
+const urlArtist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/artists";
+let artistOfMoment = document.getElementById("artist-of-moment");
+
+//Declaration des fonctions
+//Cette fonction génère l'artiste du moment dans le DOM
+function generateArtistOfMoment(imgSrc, artistName) {
+   
+    artistOfMoment.style = "background : url("+imgSrc+") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;";
+    let playerArtist = document.createElement("div");
+    playerArtist.className = "player-artist";
+
+    let blueCircle = document.createElement("div");
+    blueCircle.className = "blue-circle";
+
+    let imgPlay = document.createElement("img");
+    imgPlay.className = "icon-play";
+    imgPlay.src = "icons/play.svg";
+    imgPlay.alt = "icon play-pause";
+
+    blueCircle.appendChild(imgPlay);
+
+    let titre = document.createElement("h2");
+    titre.innerHTML = "Découvrez l'artiste du moment <br>"+artistName;
+    
+    playerArtist.appendChild(blueCircle);
+    playerArtist.appendChild(titre);
+    artistOfMoment.appendChild(playerArtist);
+}
+
+//Cette fonction récupère l'artist du moment
+function getArtistOfMoment(url) {
+    let requete = new XMLHttpRequest();
+    requete.open("GET", url);
+    requete.responseType = "json";
+    requete.send();
+
+    requete.onload = function () {
+        if (requete.readyState === 4 && requete.status === 200) {
+            jsonResponse = requete.response;
+            //console.log("reponse", jsonResponse);
+            console.log("reponse artists 0 src", jsonResponse.artists.data[0].picture_xl);
+            console.log("reponse artists 0 name ", jsonResponse.artists.data[0].name);
+
+            let imgSrc = jsonResponse.artists.data[0].picture_big;
+            let artistName = jsonResponse.artists.data[0].name;
+
+            generateArtistOfMoment(imgSrc, artistName);              
+        }
+    };
+}
+getArtistOfMoment(urlArtist);
+/*************** End Artist of the moment ***************/
 
 const slider = document.querySelector('.carousel');
 console.log(slider)
