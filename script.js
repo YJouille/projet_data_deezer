@@ -71,11 +71,9 @@ function getTop10Tracks(url) {
     requete.onload = function () {
         if (requete.readyState === 4 && requete.status === 200) {
             jsonResponse = requete.response;
-            console.log("reponse", jsonResponse);
-            console.log("reponse tracks", jsonResponse.tracks);
-
-
-            console.log("longueur", jsonResponse.tracks.data.length);
+            // console.log("reponse", jsonResponse);
+            // console.log("reponse tracks", jsonResponse.tracks);
+            // console.log("longueur", jsonResponse.tracks.data.length);
 
             for (let i = 0; i < jsonResponse.tracks.data.length; i++) {
                 let number = jsonResponse.tracks.data[i].position;
@@ -99,11 +97,9 @@ function getTop10Albums(url) {
     requete.onload = function () {
         if (requete.readyState === 4 && requete.status === 200) {
             jsonResponse = requete.response;
-            console.log("reponse", jsonResponse);
-            console.log("reponse albums", jsonResponse.albums);
-
-
-            console.log("longueur", jsonResponse.albums.data.length);
+            // console.log("reponse", jsonResponse);
+            // console.log("reponse albums", jsonResponse.albums);
+            // console.log("longueur", jsonResponse.albums.data.length);
 
             for (let i = 0; i < jsonResponse.albums.data.length; i++) {
                 let number = jsonResponse.albums.data[i].position;
@@ -120,6 +116,7 @@ function getTop10Albums(url) {
 getTop10Tracks(urlTracks);
 getTop10Albums(urlAlbums);
 /*************** End Top 10 tracks and top 10 albums ***************/
+
 
 
 /*************** Artist of the moment ***************/
@@ -163,18 +160,78 @@ function getArtistOfMoment(url) {
         if (requete.readyState === 4 && requete.status === 200) {
             jsonResponse = requete.response;
             //console.log("reponse", jsonResponse);
-            console.log("reponse artists 0 src", jsonResponse.artists.data[0].picture_xl);
-            console.log("reponse artists 0 name ", jsonResponse.artists.data[0].name);
+            // console.log("reponse artists 0 src", jsonResponse.artists.data[0].picture_xl);
+            // console.log("reponse artists 0 name ", jsonResponse.artists.data[0].name);
 
             let imgSrc = jsonResponse.artists.data[0].picture_big;
             let artistName = jsonResponse.artists.data[0].name;
-
             generateArtistOfMoment(imgSrc, artistName);              
         }
     };
 }
 getArtistOfMoment(urlArtist);
 /*************** End Artist of the moment ***************/
+
+/*************** Top of playlists ***************/
+const urlPlaylist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/playlists";
+let playList = document.getElementById("playlist");
+//Declaration des fonctions
+//Cette fonction génère le top des playlists dans le DOM
+function generateCarouselPlaylist(item){
+    let carouselPlayList = document.createElement("div");
+    carouselPlayList.className = "carousel";
+
+}
+//Cette fonction génère un item du top des playlists dans le DOM
+function generateTopPlayItem(imgSrc, title) {
+    let itemPlayList = document.createElement("div");
+    itemPlayList.className = "item-kind";
+    
+    let imgPlayList = document.createElement("img");
+    imgPlayList.className = "img-kind";
+    imgPlayList.src = imgSrc;
+    imgPlayList.alt = "image play list";
+
+    let titlePlaylist = document.createElement("p");
+    titlePlaylist.className = "title-kind";
+    titlePlaylist.innerHTML = title;
+    
+    itemPlayList.appendChild(imgPlayList);
+    itemPlayList.appendChild(titlePlaylist);
+    return itemPlayList;    
+}
+
+//Cette fonction récupère le top des playLists
+function getPlayLists(url) {
+    let requete = new XMLHttpRequest();
+    requete.open("GET", url);
+    requete.responseType = "json";
+    requete.send();
+
+    requete.onload = function () {
+        if (requete.readyState === 4 && requete.status === 200) {
+            jsonResponse = requete.response;
+            console.log("reponse", jsonResponse);
+
+            let carouselPlayList = document.createElement("div");
+            carouselPlayList.className = "carousel";
+
+            for (let i = 0; i < jsonResponse.playlists.data.length; i++) {
+                let imgSrc = jsonResponse.playlists.data[i].picture_medium;
+                let title = jsonResponse.playlists.data[i].title;
+                console.log("title top playlists ", title);
+                console.log("src image top playlists", imgSrc);
+
+                carouselPlayList.appendChild(generateTopPlayItem(imgSrc, title));
+                
+                
+            }playList.appendChild(carouselPlayList);
+                        
+        }
+    };
+}
+getPlayLists(urlPlaylist);
+/*************** End Top of playlists ***************/
 
 const slider = document.querySelector('.carousel');
 console.log(slider)

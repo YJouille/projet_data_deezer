@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -144,9 +144,13 @@
         </div>
         <div id="playlist">
             <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
-            <div class="carousel">
-                <!-- Pareil que genre kind -->
+            <!-- <div class="carousel">
+                <div class="item-kind">
+                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
+                    <p class="title-kind">PoP</p>
             </div>
+            </div> -->
+          
         </div>
         <div id="podcast">
             <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
