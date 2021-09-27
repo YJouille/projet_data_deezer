@@ -1,4 +1,45 @@
 /*************** Top 10 tracks and top 10 albums ***************/
+// kind music
+const url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
+let requete = new XMLHttpRequest();
+requete.open("GET", url);
+requete.responseType ="json";
+requete.send();
+requete.onload = function(){
+    let carousel=document.querySelector(".carousel");
+
+    if(requete.readyState === XMLHttpRequest.DONE){
+        if(requete.status === 200){
+            let reponse = requete.response;
+            console.log(reponse);
+
+            for (let i=1; i<reponse.data.length; i++) {
+                let dataName=reponse.data[i].name;
+                let dataPicture=reponse.data[i].picture;
+                let item = document.createElement("div");
+                item.className="item-kind";
+
+                let img=document.createElement("img");
+                img.className="img-kind";
+                img.src=dataPicture;
+                item.appendChild(img);
+
+                let title=document.createElement("p");
+                title.className="title-kind";
+                title.innerHTML=dataName;
+                item.appendChild(title);
+                
+                carousel.appendChild(item);
+            }
+        }
+        else {
+            alert ("Un problème est survenu merci de revenir plus tard");
+        }
+    }
+}
+
+
+// Top 10 tracks and top 10 albums
 // Declaration variables
 const urlTracks = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/tracks";
 const urlAlbums = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/albums";
@@ -25,10 +66,12 @@ function generateItem(number, imgSrc, titleMusic, titleArtist, duration, divPare
 
     let info = document.createElement("div");
     info.className = "info-music";
+    
     let title = document.createElement("p");
     title.className = "title-music";
     title.innerHTML = titleMusic;
     info.appendChild(title);
+
     let artist = document.createElement("p");
     artist.className = "artist-music";
     artist.innerHTML = titleArtist;
@@ -177,7 +220,7 @@ getArtistOfMoment(urlArtist);
 /*************** End Artist of the moment ***************/
 
 const slider = document.querySelector('.carousel');
-console.log(slider)
+console.log(slider);
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -197,10 +240,10 @@ slider.addEventListener('mouseup', () => {
     slider.classList.remove('active');
 });
 slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk / 2;
-    console.log(walk);
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk/2;
+  console.log(walk);
 });
