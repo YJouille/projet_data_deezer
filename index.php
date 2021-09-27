@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -130,7 +130,7 @@
                             </div>
                             <p class="duration">00:00</p>
                             <div class ="white-line"></div>
-                         </div> -->    
+                         </div> -->
                 </div>
             </div>
         </div>
@@ -185,7 +185,6 @@
             </div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit consequuntur eligendi iusto libero delectus nisi, ratione neque, vel expedita illum tenetur atque porro in sunt autem vitae, excepturi eveniet obcaecati!
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, magni non quo incidunt commodi nostrum, eum architecto eligendi ratione nesciunt excepturi, illum labore impedit saepe suscipit voluptas aut delectus facere.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum facilis repellat odit, illum dignissimos ad maxime a, beatae atque nesciunt, at assumenda amet! Libero, vitae id incidunt delectus veritatis nam!</p>
         </div>
         <div class="footer-col">
             <h4>Inscrivez-vous à la Newsletter</h4>
