@@ -118,38 +118,6 @@
                 </div>
             </div>
             <div class="top-10-col">
-<<<<<<< HEAD
-                <h4><span class=lightblue>Top 10 </span> des albums les plus écoutés</h4>
-                <div class="item-music">
-                    <p>01</p>
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                    <div class="info-music">
-                        <p class="title-music">Bad Habbits</p>
-                        <p class="artist-music">Ed Sheeran</p>
-                    </div>
-                    <p class="duration">00:00</p>
-                    <div class ="white-line"></div>
-                </div>
-                <div class="item-music">
-                    <p>02</p>
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                    <div class="info-music">
-                        <p class="title-music">Bad Habbits</p>
-                        <p class="artist-music">Ed Sheeran</p>
-                    </div>
-                    <p class="duration">00:00</p>
-                    <div class ="white-line"></div>
-                </div>
-                <div class="item-music">
-                    <p>03</p>
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                    <div class="info-music">
-                        <p class="title-music">Bad Habbits</p>
-                        <p class="artist-music">Ed Sheeran</p>
-                    </div>
-                    <p class="duration">00:00</p>
-                    <div class ="white-line"></div>
-=======
                 <h4><span class="lightblue">Top 10 </span> des albums les plus écoutés</h4>
                 <div id="top-10-albums">
                     <!--Sample of album item-->
@@ -163,7 +131,6 @@
                             <p class="duration">00:00</p>
                             <div class ="white-line"></div>
                          </div> -->    
->>>>>>> 2873cbd4349bbb4f96f1bbe27893598d772232a8
                 </div>
             </div>
         </div>
@@ -182,7 +149,6 @@
             </div>
         </div>
         <div id="podcast">
-<<<<<<< HEAD
             <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
             <div class="carousel">
                 <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
@@ -194,9 +160,6 @@
                 <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
                 <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
             </div>
-=======
-
->>>>>>> 2873cbd4349bbb4f96f1bbe27893598d772232a8
         </div>
 
     </main>
