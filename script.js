@@ -120,6 +120,7 @@ getTop10Albums(urlAlbums);
 
 
 /*************** Artist of the moment ***************/
+//Declaration des viariables
 const urlArtist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/artists";
 let artistOfMoment = document.getElementById("artist-of-moment");
 
@@ -173,15 +174,21 @@ getArtistOfMoment(urlArtist);
 /*************** End Artist of the moment ***************/
 
 /*************** Top of playlists ***************/
+//Declaration des variables
 const urlPlaylist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/playlists";
 let playList = document.getElementById("playlist");
 //Declaration des fonctions
+
 //Cette fonction génère le top des playlists dans le DOM
-function generateCarouselPlaylist(item){
+function generateCarouselPlaylist(items){
     let carouselPlayList = document.createElement("div");
     carouselPlayList.className = "carousel";
-
+    for (let item of items) {
+        carouselPlayList.appendChild(item);
+    }
+    return carouselPlayList;
 }
+
 //Cette fonction génère un item du top des playlists dans le DOM
 function generateTopPlayItem(imgSrc, title) {
     let itemPlayList = document.createElement("div");
@@ -198,11 +205,14 @@ function generateTopPlayItem(imgSrc, title) {
     
     itemPlayList.appendChild(imgPlayList);
     itemPlayList.appendChild(titlePlaylist);
+    console.log("item : "+imgPlayList);
     return itemPlayList;    
 }
 
 //Cette fonction récupère le top des playLists
 function getPlayLists(url) {
+
+    let items = new Array();
     let requete = new XMLHttpRequest();
     requete.open("GET", url);
     requete.responseType = "json";
@@ -219,13 +229,13 @@ function getPlayLists(url) {
             for (let i = 0; i < jsonResponse.playlists.data.length; i++) {
                 let imgSrc = jsonResponse.playlists.data[i].picture_medium;
                 let title = jsonResponse.playlists.data[i].title;
+               
                 console.log("title top playlists ", title);
                 console.log("src image top playlists", imgSrc);
-
-                carouselPlayList.appendChild(generateTopPlayItem(imgSrc, title));
-                
-                
-            }playList.appendChild(carouselPlayList);
+  
+               items.push(generateTopPlayItem(imgSrc, title));
+            }
+            playList.appendChild(generateCarouselPlaylist(items));
                         
         }
     };
