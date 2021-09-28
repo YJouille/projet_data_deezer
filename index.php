@@ -130,7 +130,7 @@
                             </div>
                             <p class="duration">00:00</p>
                             <div class ="white-line"></div>
-                         </div> -->    
+                         </div> -->
                 </div>
             </div>
         </div>
@@ -150,19 +150,19 @@
                     <p class="title-kind">PoP</p>
             </div>
             </div> -->
-          
+
         </div>
         <div id="podcast">
             <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
             <div class="carousel">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
+                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
             </div>
         </div>
 
@@ -225,6 +225,32 @@
 
     </div>
 
+    <!-- player -->
+    <div id="dz-root"></div>
+    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <!-- <script>
+        let morceau;
+        DZ.init({
+            appId: '505122',
+            channelUrl: 'https://yaminaj.promo-93.codeur.online/channel.php',
+            player: {
+                container: 'lecteur',
+                width: 800,
+                height: 300,
+                onload: function() {
+                    muted: false,
+                  
+                    DZ.player.playTracks([morceau]);
+                }
+            }
+        });
+    </script> -->
+
+    <!-- <iframe id="player"
+    title="deezer-widget"
+    src="https://widget.deezer.com/widget/dark/track/1478733212?autoplay=true"
+    width="100%" height="150" frameborder="0" allowtransparency="true"
+    allow="encrypted-media; clipboard-write"></iframe> -->
     <script src="script.js"></script>
 </body>
 

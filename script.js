@@ -7,9 +7,32 @@ let top10Albums = document.getElementById("top-10-albums");
 
 //Declaration des fonctions
 //Cette fonction génère la colonne Top10 tracks ou Top10 albums dans le DOM
-function generateItem(number, imgSrc, titleMusic, titleArtist, duration, divParent) {
+function generateItem(number, imgSrc, titleMusic, titleArtist, duration, divParent, trackId) {
     let item = document.createElement("div");
+  
     item.className = "item-music";
+
+    item.addEventListener('click', function () {
+    
+        morceau = trackId;
+        
+        DZ.init({
+            appId: '505122',
+            channelUrl: 'https://yaminaj.promo-93.codeur.online/channel.php',
+            player: {
+                container: 'lecteur',
+                width: 800,
+                height: 150,
+                onload: function() {
+                    muted: false,
+                  
+                    DZ.player.playTracks([morceau]);
+                }
+            }
+        });
+        
+    });
+
 
     let position = document.createElement("p");
     position.className = "number";
@@ -81,11 +104,19 @@ function getTop10Tracks(url) {
                 let titleMusic = jsonResponse.tracks.data[i].title;
                 let titleArtist = jsonResponse.tracks.data[i].artist.name;
                 let duration = jsonResponse.tracks.data[i].duration;
-                generateItem(number, imgSrc, titleMusic, titleArtist, duration, top10Tracks);
+                let trackId = jsonResponse.tracks.data[i].id;
+                generateItem(number, imgSrc, titleMusic, titleArtist, duration, top10Tracks, trackId);
             }
         }
     };
 }
+
+function deezerPlayer(trackId) {
+    let playerDom = document.getElementById("player");
+    playerDom.src = "https://widget.deezer.com/widget/dark/track/" + trackId;
+    console.log("PLAYER : https://widget.deezer.com/widget/dark/track/" + trackId);
+}
+
 
 //Cette fonction récupère l'objet json des top10 albums
 function getTop10Albums(url) {
@@ -230,13 +261,12 @@ function getPlayLists(url) {
                 let imgSrc = jsonResponse.playlists.data[i].picture_medium;
                 let title = jsonResponse.playlists.data[i].title;
                
-                console.log("title top playlists ", title);
-                console.log("src image top playlists", imgSrc);
+                // console.log("title top playlists ", title);
+                // console.log("src image top playlists", imgSrc);
   
                items.push(generateTopPlayItem(imgSrc, title));
             }
-            playList.appendChild(generateCarouselPlaylist(items));
-                        
+            playList.appendChild(generateCarouselPlaylist(items));                        
         }
     };
 }
