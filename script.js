@@ -1,6 +1,6 @@
 /*************** Top 10 tracks and top 10 albums ***************/
 // kind music
-const urlGenre = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
+const urlGenre = "https://api.deezer.com/genre";
 let requeteGenre = new XMLHttpRequest();
 requeteGenre.open("GET", urlGenre);
 requeteGenre.responseType ="json";
@@ -11,7 +11,6 @@ requeteGenre.onload = function(){
     if(requeteGenre.readyState === XMLHttpRequest.DONE){
         if(requeteGenre.status === 200){
             let reponse = requeteGenre.response;
-            console.log(reponse);
 
             for (let i=1; i<reponse.data.length; i++) {
                 let dataName=reponse.data[i].name;
@@ -23,6 +22,7 @@ requeteGenre.onload = function(){
                 let img=document.createElement("img");
                 img.className="img-kind";
                 img.src=dataPicture;
+                img.alt = dataName;
                 item.appendChild(img);
 
                 let title=document.createElement("p");
@@ -40,7 +40,7 @@ requeteGenre.onload = function(){
 }
 
 // podcast radio
-const urlPodcast = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/podcast";
+const urlPodcast = "https://api.deezer.com/chart/podcast";
 let requetePodcast = new XMLHttpRequest();
 requetePodcast.open("GET", urlPodcast);
 requetePodcast.responseType ="json";
@@ -51,9 +51,10 @@ requetePodcast.onload = function(){
     if(requetePodcast.readyState === XMLHttpRequest.DONE){
         if(requetePodcast.status === 200){
             let reponse = requetePodcast.response;
-
+            console.log(reponse)
             for (let x=0; x<reponse.podcasts.data.length; x++) {
-                let dataPicture=reponse.podcasts.data[x].picture_big;
+                
+                let dataPicture=reponse.podcasts.data[x].picture_medium;
                 let dataDescription=reponse.podcasts.data[x].description;
 
                 let itemPodcast=document.createElement("div");
@@ -62,6 +63,8 @@ requetePodcast.onload = function(){
                 let imgPodcast=document.createElement("img");
                 imgPodcast.className="img-podcast";
                 imgPodcast.src=dataPicture;
+                imgPodcast.alt = reponse.podcasts.data[x].name;
+
                 itemPodcast.appendChild(imgPodcast);
 
                 let descriptionPodcast=document.createElement("p");
@@ -81,8 +84,8 @@ requetePodcast.onload = function(){
 
 // Top 10 tracks and top 10 albums
 // Declaration variables
-const urlTracks = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/tracks";
-const urlAlbums = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/albums";
+const urlTracks = "https://api.deezer.com/chart/tracks";
+const urlAlbums = "https://api.deezer.com/chart/albums";
 let top10Tracks = document.getElementById("top-10-tracks");
 let top10Albums = document.getElementById("top-10-albums");
 
@@ -154,11 +157,6 @@ function getTop10Tracks(url) {
     requete.onload = function () {
         if (requete.readyState === 4 && requete.status === 200) {
             jsonResponse = requete.response;
-            console.log("reponse", jsonResponse);
-            console.log("reponse tracks", jsonResponse.tracks);
-
-
-            console.log("longueur", jsonResponse.tracks.data.length);
 
             for (let i = 0; i < jsonResponse.tracks.data.length; i++) {
                 let number = jsonResponse.tracks.data[i].position;
@@ -182,11 +180,6 @@ function getTop10Albums(url) {
     requete.onload = function () {
         if (requete.readyState === 4 && requete.status === 200) {
             jsonResponse = requete.response;
-            console.log("reponse", jsonResponse);
-            console.log("reponse albums", jsonResponse.albums);
-
-
-            console.log("longueur", jsonResponse.albums.data.length);
 
             for (let i = 0; i < jsonResponse.albums.data.length; i++) {
                 let number = jsonResponse.albums.data[i].position;
@@ -195,6 +188,7 @@ function getTop10Albums(url) {
                 let titleArtist = jsonResponse.albums.data[i].artist.name;
                 let duration = jsonResponse.albums.data[i].duration;
                 generateItem(number, imgSrc, titleMusic, titleArtist, duration, top10Albums);
+                
             }
         }
     };
@@ -206,7 +200,7 @@ getTop10Albums(urlAlbums);
 
 
 /*************** Artist of the moment ***************/
-const urlArtist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/artists";
+const urlArtist = "https://api.deezer.com/chart/artists";
 let artistOfMoment = document.getElementById("artist-of-moment");
 
 //Declaration des fonctions
@@ -245,45 +239,47 @@ function getArtistOfMoment(url) {
     requete.onload = function () {
         if (requete.readyState === 4 && requete.status === 200) {
             jsonResponse = requete.response;
-            //console.log("reponse", jsonResponse);
-            console.log("reponse artists 0 src", jsonResponse.artists.data[0].picture_xl);
-            console.log("reponse artists 0 name ", jsonResponse.artists.data[0].name);
 
             let imgSrc = jsonResponse.artists.data[0].picture_big;
             let artistName = jsonResponse.artists.data[0].name;
 
-            generateArtistOfMoment(imgSrc, artistName);              
+            generateArtistOfMoment(imgSrc, artistName);
         }
     };
 }
 getArtistOfMoment(urlArtist);
 /*************** End Artist of the moment ***************/
 
-const slider = document.querySelector('.carousel');
-console.log(slider);
-let isDown = false;
-let startX;
-let scrollLeft;
+const sliderList = document.querySelectorAll('.carousel');
+for(slider of sliderList){
+    oneSlider(slider)
+}
 
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
-slider.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk/2;
-  console.log(walk);
-});
+function oneSlider(slider){
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3; //scroll-fast
+        slider.scrollLeft = scrollLeft - walk / 2;
+    });
+
+}
