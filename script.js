@@ -112,7 +112,9 @@ function getTop10Albums(url) {
                 let titleArtist = jsonResponse.albums.data[i].artist.name;
                 let duration = jsonResponse.albums.data[i].duration;
                 generateItem(number, imgSrc, titleMusic, titleArtist, duration, top10Albums);
+                
             }
+            afterLoading();
         }
     };
 }
@@ -204,3 +206,5 @@ slider.addEventListener('mousemove', (e) => {
     slider.scrollLeft = scrollLeft - walk / 2;
     console.log(walk);
 });
+
+
