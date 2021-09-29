@@ -1,21 +1,22 @@
 /*************** Top 10 tracks and top 10 albums ***************/
 // kind music
-const url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
-let requete = new XMLHttpRequest();
-requete.open("GET", url);
-requete.responseType ="json";
-requete.send();
-requete.onload = function(){
+const urlGenre = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
+let requeteGenre = new XMLHttpRequest();
+requeteGenre.open("GET", urlGenre);
+requeteGenre.responseType ="json";
+requeteGenre.send();
+requeteGenre.onload = function(){
     let carousel=document.querySelector(".carousel");
 
-    if(requete.readyState === XMLHttpRequest.DONE){
-        if(requete.status === 200){
-            let reponse = requete.response;
+    if(requeteGenre.readyState === XMLHttpRequest.DONE){
+        if(requeteGenre.status === 200){
+            let reponse = requeteGenre.response;
             console.log(reponse);
 
             for (let i=1; i<reponse.data.length; i++) {
                 let dataName=reponse.data[i].name;
                 let dataPicture=reponse.data[i].picture;
+
                 let item = document.createElement("div");
                 item.className="item-kind";
 
@@ -30,6 +31,45 @@ requete.onload = function(){
                 item.appendChild(title);
                 
                 carousel.appendChild(item);
+            }
+        }
+        else {
+            alert ("Un problème est survenu merci de revenir plus tard");
+        }
+    }
+}
+
+// podcast radio
+const urlPodcast = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/podcast";
+let requetePodcast = new XMLHttpRequest();
+requetePodcast.open("GET", urlPodcast);
+requetePodcast.responseType ="json";
+requetePodcast.send();
+requetePodcast.onload = function(){
+    let carousel=document.querySelector("#podcast .carousel");
+
+    if(requetePodcast.readyState === XMLHttpRequest.DONE){
+        if(requetePodcast.status === 200){
+            let reponse = requetePodcast.response;
+
+            for (let x=0; x<reponse.podcasts.data.length; x++) {
+                let dataPicture=reponse.podcasts.data[x].picture_big;
+                let dataDescription=reponse.podcasts.data[x].description;
+
+                let itemPodcast=document.createElement("div");
+                itemPodcast.className="item-podcast";
+
+                let imgPodcast=document.createElement("img");
+                imgPodcast.className="img-podcast";
+                imgPodcast.src=dataPicture;
+                itemPodcast.appendChild(imgPodcast);
+
+                let descriptionPodcast=document.createElement("p");
+                descriptionPodcast.className="description-podcast";
+                descriptionPodcast.innerHTML=dataDescription;
+                itemPodcast.appendChild(descriptionPodcast);
+                
+                carousel.appendChild(itemPodcast);
             }
         }
         else {

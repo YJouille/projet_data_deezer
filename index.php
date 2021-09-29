@@ -122,16 +122,9 @@
             </div>
         </div>
         <div id="podcast">
-            <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
+            <h4><span class="lightblue">Revivez </span> vos emissions préférées</h4>
             <div class="carousel">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles" >
+                
             </div>
         </div>
 
