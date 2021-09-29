@@ -201,6 +201,8 @@ h1{
 .icon{
     margin: auto;
     width: 60%;
+    height: auto;
+
 }
 div{
     /* border: solid 1px red; */
@@ -238,7 +240,7 @@ footer .btn-logo-appli{
     align-items: start;
     width: 40px;
 }
-h4{
+h3{
     font-size: 18px;
     font-family: UrbanistBlack;
     color: white;
@@ -321,6 +323,8 @@ footer .blue-button{
 }
 .img-kind{
     width: 184px;
+    height: 184px;
+
 }
 .title-kind{
     font-family: UrbanistBold;
@@ -342,7 +346,7 @@ footer .blue-button{
     display: flex;
     flex-direction: column;
 }
-#top-10 h4{
+#top-10 h3{
     margin-bottom: 30px;
 }
 .item-music{
@@ -356,27 +360,20 @@ footer .blue-button{
     margin-bottom: 10px;
     transition: 400ms ease-in-out;
     position: relative;
-    
+    cursor: pointer;
 }
 
 .item-music:hover .white-line{
-    /* padding: 10px;
-    padding-left: 20px; */
+    height: 82px;
+    top: -4px;
+    background-color: #3bc8e7;
+    opacity: 0.2;
 
-    animation: 0.5s music-item-anim;
-    animation-fill-mode: forwards;
-    /* 0.8 0.8 reverse music-item-anim; */
-
-    /* animation-direction: alternate; */
-    /* animation-iteration-count: 2;
-    -webkit-animation-play-state: paused; */
 }
-
-/* .anim-item{
-    animation: music-item-anim alternate 0.8s ;
-    animation-iteration-count: 1;
-    /* 
+/* .item-music:hover{
+    padding-left: 20px;
 } */
+
 .en-pause{
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
@@ -388,7 +385,7 @@ footer .blue-button{
     background-color: #c4c4c42d;
     position: absolute;
     top: 80px;
-    /* transition: 0.5s; */
+    transition: 0.5s;
 }
 
 @keyframes music-item-anim{
@@ -405,6 +402,8 @@ footer .blue-button{
 }
 .img-music{
     width: 60px;
+    height: 60px;
+
 }
 .info-music{
     width: 60%;
@@ -464,9 +463,11 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .icon-play{
     margin-left: 8px;
+
 }
 
 /* Top playlist */
@@ -488,7 +489,7 @@ h2{
     background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
 
 }
-#podcast h4{
+#podcast h3{
     margin-bottom: 30px;
 }
 .podcast-container{
@@ -500,6 +501,7 @@ h2{
 }
 .img-podcast{
     width: 288px;
+    height: 288px;
 }
 
 /* item podcast */
@@ -526,6 +528,7 @@ h2{
 .item-podcast p{
     vertical-align: middle;
     text-align: center;
+    font-family: UrbanistLight;
 }
 
 
@@ -619,9 +622,13 @@ button, input[type="submit"], input[type="reset"] {
         margin-top: 10px;
     }
     .img-podcast{
-        width: 80px;
+        width: 100px;
+        height: 100px;
     }
-    #podcast h4{
+    .item-podcast p{
+        font-size: 8px;
+    }
+    #podcast h3{
         margin-bottom: 3px;
         margin-top: 3px;
     }
@@ -631,7 +638,7 @@ button, input[type="submit"], input[type="reset"] {
     h2{
         font-size: 18px;
     }
-    h4{
+    h3{
         font-size: 18px;
     }
 }
@@ -657,7 +664,7 @@ button, input[type="submit"], input[type="reset"] {
     h2{
         width: 80%;
     }
-    h4{
+    h3{
         font-size: 14px;
     }
     #identify img{

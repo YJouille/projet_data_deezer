@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet data deezer </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/fav-icon.svg">
+    <title>Music Band - La musique au bout des doigts</title>
+    <meta name="description"
+        content="Votre musique sans pub, partout. Des podcasts exclusifs. Des playlists sur-mesure. Faites des découvertes. Plus de 50 M de chansons.">
+    <meta name="keywords" content="musique, podcast, playlist, gratuit, deezer">
 </head>
 
 <body>
@@ -40,13 +44,13 @@
 
             <div id="nav-right">
                 <div id="div-research">
-                    <input type="text" value="Recherchez, écoutez...">
+                    <input type="text" placeholder="Recherchez, écoutez...">
                     <div class="blue-square">
                         <img class="icon" src="icons/helmet.svg" alt="Icon helmet">
                     </div>
                 </div>
                 <div id="identify">
-                    <img src="images/photo_alain.png" alt="photo of you">
+                    <img src="icons/profile-user.svg" alt="photo of you">
                     <div class="blue-title">Alain</div>
                 </div>
             </div>
@@ -67,13 +71,13 @@
 
     <main>
         <div id="kind">
-            <h4>Genre</h4>
+            <h3>Genre</h3>
             <div class="carousel"></div>
         </div>
 
         <div id="top-10">
             <div class="top-10-col">
-                <h4><span class="lightblue">Top 10 </span> des morceaux les plus écoutés</h4>
+                <h3><span class="lightblue">Top 10 </span> des morceaux les plus écoutés</h3>
                 <div id="top-10-tracks">
                     <!--Sample of track item-->
                     <!-- <div class="item-music">
@@ -90,7 +94,7 @@
             </div>
 
             <div class="top-10-col">
-                <h4><span class="lightblue">Top 10 </span> des albums les plus écoutés</h4>
+                <h3><span class="lightblue">Top 10 </span> des albums les plus écoutés</h3>
                 <div id="top-10-albums">
                     <!--Sample of album item-->
                     <!-- <div class="item-music">
@@ -116,13 +120,13 @@
             </div> -->
         </div>
         <div id="playlist">
-            <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
+            <h3><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h3>
             <div class="carousel">
                 <!-- Pareil que genre kind -->
             </div>
         </div>
         <div id="podcast">
-            <h4><span class="lightblue">Revivez </span> vos emissions préférées</h4>
+            <h3><span class="lightblue">Revivez </span> vos emissions préférées</h3>
             <div class="carousel">
                 
             </div>
@@ -154,14 +158,14 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum facilis repellat odit, illum dignissimos ad maxime a, beatae atque nesciunt, at assumenda amet! Libero, vitae id incidunt delectus veritatis nam!</p>
         </div>
         <div class="footer-col">
-            <h4>Inscrivez-vous à la Newsletter</h4>
+            <h3>Inscrivez-vous à la Newsletter</h3>
             <p>Abonnez-vous à notre newsletter et recevez les dernières mises à jour et offres.</p>
-            <input type="text" value="Entrez votre nom">
-            <input type="text" value="Entrez votre email">
+            <input type="text" placeholder="Entrez votre nom">
+            <input type="text" placeholder="Entrez votre email">
             <button class="blue-button">inscrivez-vous</button>
         </div>
         <div class="footer-col">
-            <h4>Nous contacter</h4>
+            <h3>Nous contacter</h3>
             <p>Vous souhaitez nous contacter.<br>Plusieurs solutions s'offrent à vous</p>
             <div class="flex-row-none">
                 <div class="blue-square-footer">
