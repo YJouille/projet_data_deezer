@@ -37,6 +37,7 @@
                     <p class="blue-sub-title">La musique au bout des doigts</p>
                 </div>
             </div>
+
             <div id="nav-right">
                 <div id="div-research">
                     <input type="text" value="Recherchez, écoutez...">
@@ -50,6 +51,7 @@
                 </div>
             </div>
         </nav>
+
         <div id="header-main">
             <div id="container-title">
                 <h1><span class="lightblue">Music</span>&#xA0;Band</h1>
@@ -62,44 +64,13 @@
             </div>
         </div>
     </header>
+
     <main>
         <div id="kind">
             <h4>Genre</h4>
-            <div class="carousel">
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
-                </div>
-            </div>
+            <div class="carousel"></div>
         </div>
+
         <div id="top-10">
             <div class="top-10-col">
                 <h4><span class="lightblue">Top 10 </span> des morceaux les plus écoutés</h4>
@@ -117,6 +88,7 @@
                          </div> -->
                 </div>
             </div>
+
             <div class="top-10-col">
                 <h4><span class="lightblue">Top 10 </span> des albums les plus écoutés</h4>
                 <div id="top-10-albums">
@@ -131,17 +103,24 @@
                             <p class="duration">00:00</p>
                             <div class ="white-line"></div>
                          </div> -->    
+<<<<<<< HEAD
     
                 </div>
             </div>
             </div>
+=======
+                </div>
+            </div>
+        </div>
+        
+>>>>>>> 0ca23d2ebceeb918a7c6ef398039108b07e4c18d
         <div id="artist-of-moment">
-            <div class="player-artist">
+            <!-- <div class="player-artist">
                 <div class="blue-circle">
                     <img class="icon-play" src="icons/play.svg" alt="icon play-pause">
                 </div>
                 <h2>Découvrez l'artiste du moment <br> NINHO</h2>
-            </div>
+            </div> -->
         </div>
         <div id="playlist">
             <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
@@ -150,6 +129,13 @@
             </div>
         </div>
         <div id="podcast">
+<<<<<<< HEAD
+=======
+            <h4><span class="lightblue">Revivez </span> vos emissions préférées</h4>
+            <div class="carousel">
+                
+            </div>
+>>>>>>> 0ca23d2ebceeb918a7c6ef398039108b07e4c18d
         </div>
 
     </main>

@@ -1,3 +1,84 @@
+/*************** Top 10 tracks and top 10 albums ***************/
+// kind music
+const urlGenre = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
+let requeteGenre = new XMLHttpRequest();
+requeteGenre.open("GET", urlGenre);
+requeteGenre.responseType ="json";
+requeteGenre.send();
+requeteGenre.onload = function(){
+    let carousel=document.querySelector(".carousel");
+
+    if(requeteGenre.readyState === XMLHttpRequest.DONE){
+        if(requeteGenre.status === 200){
+            let reponse = requeteGenre.response;
+            console.log(reponse);
+
+            for (let i=1; i<reponse.data.length; i++) {
+                let dataName=reponse.data[i].name;
+                let dataPicture=reponse.data[i].picture;
+
+                let item = document.createElement("div");
+                item.className="item-kind";
+
+                let img=document.createElement("img");
+                img.className="img-kind";
+                img.src=dataPicture;
+                item.appendChild(img);
+
+                let title=document.createElement("p");
+                title.className="title-kind";
+                title.innerHTML=dataName;
+                item.appendChild(title);
+                
+                carousel.appendChild(item);
+            }
+        }
+        else {
+            alert ("Un problème est survenu merci de revenir plus tard");
+        }
+    }
+}
+
+// podcast radio
+const urlPodcast = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/podcast";
+let requetePodcast = new XMLHttpRequest();
+requetePodcast.open("GET", urlPodcast);
+requetePodcast.responseType ="json";
+requetePodcast.send();
+requetePodcast.onload = function(){
+    let carousel=document.querySelector("#podcast .carousel");
+
+    if(requetePodcast.readyState === XMLHttpRequest.DONE){
+        if(requetePodcast.status === 200){
+            let reponse = requetePodcast.response;
+
+            for (let x=0; x<reponse.podcasts.data.length; x++) {
+                let dataPicture=reponse.podcasts.data[x].picture_big;
+                let dataDescription=reponse.podcasts.data[x].description;
+
+                let itemPodcast=document.createElement("div");
+                itemPodcast.className="item-podcast";
+
+                let imgPodcast=document.createElement("img");
+                imgPodcast.className="img-podcast";
+                imgPodcast.src=dataPicture;
+                itemPodcast.appendChild(imgPodcast);
+
+                let descriptionPodcast=document.createElement("p");
+                descriptionPodcast.className="description-podcast";
+                descriptionPodcast.innerHTML=dataDescription;
+                itemPodcast.appendChild(descriptionPodcast);
+                
+                carousel.appendChild(itemPodcast);
+            }
+        }
+        else {
+            alert ("Un problème est survenu merci de revenir plus tard");
+        }
+    }
+}
+
+
 // Top 10 tracks and top 10 albums
 // Declaration variables
 const urlTracks = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/tracks";
@@ -20,14 +101,17 @@ function generateItem(number, imgSrc, titleMusic, titleArtist, duration, divPare
     let img = document.createElement("img");
     img.className = "img-music";
     img.src = imgSrc;
+    img.alt = "vignette top10";
     item.appendChild(img);
 
     let info = document.createElement("div");
     info.className = "info-music";
+    
     let title = document.createElement("p");
     title.className = "title-music";
     title.innerHTML = titleMusic;
     info.appendChild(title);
+
     let artist = document.createElement("p");
     artist.className = "artist-music";
     artist.innerHTML = titleArtist;
@@ -118,9 +202,65 @@ function getTop10Albums(url) {
 //Appel des fonctions
 getTop10Tracks(urlTracks);
 getTop10Albums(urlAlbums);
+/*************** End Top 10 tracks and top 10 albums ***************/
+
+
+/*************** Artist of the moment ***************/
+const urlArtist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/artists";
+let artistOfMoment = document.getElementById("artist-of-moment");
+
+//Declaration des fonctions
+//Cette fonction génère l'artiste du moment dans le DOM
+function generateArtistOfMoment(imgSrc, artistName) {
+   
+    artistOfMoment.style = "background : url("+imgSrc+") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;background-size: cover;";
+    let playerArtist = document.createElement("div");
+    playerArtist.className = "player-artist";
+
+    let blueCircle = document.createElement("div");
+    blueCircle.className = "blue-circle";
+
+    let imgPlay = document.createElement("img");
+    imgPlay.className = "icon-play";
+    imgPlay.src = "icons/play.svg";
+    imgPlay.alt = "icon play-pause";
+
+    blueCircle.appendChild(imgPlay);
+
+    let titre = document.createElement("h2");
+    titre.innerHTML = "Découvrez l'artiste du moment <br>"+artistName;
+    
+    playerArtist.appendChild(blueCircle);
+    playerArtist.appendChild(titre);
+    artistOfMoment.appendChild(playerArtist);
+}
+
+//Cette fonction récupère l'artist du moment
+function getArtistOfMoment(url) {
+    let requete = new XMLHttpRequest();
+    requete.open("GET", url);
+    requete.responseType = "json";
+    requete.send();
+
+    requete.onload = function () {
+        if (requete.readyState === 4 && requete.status === 200) {
+            jsonResponse = requete.response;
+            //console.log("reponse", jsonResponse);
+            console.log("reponse artists 0 src", jsonResponse.artists.data[0].picture_xl);
+            console.log("reponse artists 0 name ", jsonResponse.artists.data[0].name);
+
+            let imgSrc = jsonResponse.artists.data[0].picture_big;
+            let artistName = jsonResponse.artists.data[0].name;
+
+            generateArtistOfMoment(imgSrc, artistName);              
+        }
+    };
+}
+getArtistOfMoment(urlArtist);
+/*************** End Artist of the moment ***************/
 
 const slider = document.querySelector('.carousel');
-console.log(slider)
+console.log(slider);
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -140,10 +280,10 @@ slider.addEventListener('mouseup', () => {
     slider.classList.remove('active');
 });
 slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk / 2;
-    console.log(walk);
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk/2;
+  console.log(walk);
 });
