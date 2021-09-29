@@ -457,7 +457,11 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: end;
+<<<<<<< HEAD
     background: url("images/accueil-nana.png") no-repeat center center;
+=======
+    
+>>>>>>> yamina
 }
 .player-artist{
     display: flex;
@@ -489,6 +493,7 @@ h2{
     background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
 
 }
+
 /* Podcast */
 #podcast{
     /* width: 100%; */
