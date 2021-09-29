@@ -9,28 +9,10 @@ let top10Albums = document.getElementById("top-10-albums");
 //Cette fonction génère la colonne Top10 tracks ou Top10 albums dans le DOM
 function generateItem(number, imgSrc, titleMusic, titleArtist, duration, divParent, trackId) {
     let item = document.createElement("div");
-  
     item.className = "item-music";
 
     item.addEventListener('click', function () {
-    
-        morceau = trackId;
-        
-        DZ.init({
-            appId: '505122',
-            channelUrl: 'https://yaminaj.promo-93.codeur.online/channel.php',
-            player: {
-                container: 'lecteur',
-                width: 800,
-                height: 150,
-                onload: function() {
-                    muted: false,
-                  
-                    DZ.player.playTracks([morceau]);
-                }
-            }
-        });
-        
+        DZ.player.playTracks([trackId]);
     });
 
 
@@ -111,11 +93,6 @@ function getTop10Tracks(url) {
     };
 }
 
-function deezerPlayer(trackId) {
-    let playerDom = document.getElementById("player");
-    playerDom.src = "https://widget.deezer.com/widget/dark/track/" + trackId;
-    console.log("PLAYER : https://widget.deezer.com/widget/dark/track/" + trackId);
-}
 
 
 //Cette fonction récupère l'objet json des top10 albums
@@ -271,10 +248,11 @@ function getPlayLists(url) {
     };
 }
 getPlayLists(urlPlaylist);
+
 /*************** End Top of playlists ***************/
 
 const slider = document.querySelector('.carousel');
-console.log(slider)
+
 let isDown = false;
 let startX;
 let scrollLeft;

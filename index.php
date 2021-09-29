@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet data deezer </title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
 </head>
 
 <body>
@@ -228,29 +229,22 @@
     <!-- player -->
     <div id="dz-root"></div>
     <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
-    <!-- <script>
-        let morceau;
+    <script>
         DZ.init({
             appId: '505122',
-            channelUrl: 'https://yaminaj.promo-93.codeur.online/channel.php',
+            channelUrl: 'https://yaminaj.promo-93.codeur.online/projet_data_deezer/channel.php',
             player: {
                 container: 'lecteur',
                 width: 800,
-                height: 300,
+                height: 100,
                 onload: function() {
-                    muted: false,
-                  
-                    DZ.player.playTracks([morceau]);
+                    
                 }
             }
         });
-    </script> -->
+    </script>
 
-    <!-- <iframe id="player"
-    title="deezer-widget"
-    src="https://widget.deezer.com/widget/dark/track/1478733212?autoplay=true"
-    width="100%" height="150" frameborder="0" allowtransparency="true"
-    allow="encrypted-media; clipboard-write"></iframe> -->
+   
     <script src="script.js"></script>
 </body>
 
