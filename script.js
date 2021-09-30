@@ -5,7 +5,7 @@ requeteGenre.open("GET", urlGenre);
 requeteGenre.responseType ="json";
 requeteGenre.send();
 requeteGenre.onload = function(){
-    let carousel=document.querySelector(".carousel");
+    let carousel=document.querySelector("#kind .carousel");
 
     if(requeteGenre.readyState === XMLHttpRequest.DONE){
         if(requeteGenre.status === 200){
@@ -94,10 +94,19 @@ function generateItem(number, imgSrc, titleMusic, titleArtist, duration, divPare
     let item = document.createElement("div");
     item.className = "item-music";
 
+    //Au click sur l'item, le player se lance 
     item.addEventListener('click', function () {
         DZ.player.playTracks([trackId]);
-    });
+        let buttonPlay = document.getElementById("button-play");
 
+        buttonPlay.src = "icons/pause.svg";
+        buttonPlay.className = "icon-pause";
+
+        //on ajoute l'item à la colonne description du player
+        let descriptionPlayer = document.getElementById("desciption");
+        descriptionPlayer.innerHTML = "";
+        descriptionPlayer.appendChild(item.cloneNode(true));
+    });
 
     let position = document.createElement("p");
     position.className = "number";
@@ -299,8 +308,7 @@ let playList = document.getElementById("playlist");
 
 //Cette fonction génère le top des playlists dans le DOM
 function generateCarouselPlaylist(items){
-    let carouselPlayList = document.createElement("div");
-    carouselPlayList.className = "carousel";
+    let carouselPlayList = document.querySelector("#playlist .carousel");
     for (let item of items) {
         carouselPlayList.appendChild(item);
     }
@@ -360,3 +368,16 @@ function getPlayLists(url) {
 getPlayLists(urlPlaylist);
 
 /*************** End Top of playlists ***************/
+
+let buttonPlay = document.getElementById("button-play");
+buttonPlay.addEventListener('click', function () {
+    if(!DZ.player.isPlaying()) {
+        DZ.player.play();
+        buttonPlay.className = "icon-pause";
+        buttonPlay.src = "icons/pause.svg";
+    } else {
+        DZ.player.pause();
+        buttonPlay.className = "icon-play";
+        buttonPlay.src = "icons/play.svg";
+    }
+});

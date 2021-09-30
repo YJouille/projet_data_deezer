@@ -6,15 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
     <link rel="shortcut icon" href="icons/fav-icon.svg">
     <title>Music Band - La musique au bout des doigts</title>
-    <meta name="description"
-        content="Votre musique sans pub, partout. Des podcasts exclusifs. Des playlists sur-mesure. Faites des découvertes. Plus de 50 M de chansons.">
+    <meta name="description" content="Votre musique sans pub, partout. Des podcasts exclusifs. Des playlists sur-mesure. Faites des découvertes. Plus de 50 M de chansons.">
     <meta name="keywords" content="musique, podcast, playlist, gratuit, deezer">
-=======
     <script type="text/javascript" src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
->>>>>>> yamina
 </head>
 
 <body>
@@ -88,54 +84,20 @@
             <div class="top-10-col">
                 <h3><span class="lightblue">Top 10 </span> des albums les plus écoutés</h3>
                 <div id="top-10-albums">
-<<<<<<< HEAD
-=======
-                    <!--Sample of album item-->
-                    <!-- <div class="item-music">
-                            <p class="number">01</p>
-                            <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-music">
-                            <div class="info-music">
-                                <p class="title-music">Bad Habbits</p>
-                                <p class="artist-music">Ed Sheeran</p>
-                            </div>
-                            <p class="duration">00:00</p>
-                            <div class ="white-line"></div>
-                         </div> -->
->>>>>>> yamina
                 </div>
             </div>
         </div>
         <div id="artist-of-moment">
         </div>
         <div id="playlist">
-<<<<<<< HEAD
             <h3><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h3>
             <div class="carousel">
-=======
-            <h4><span class="lightblue">Le top</span> des playlists à venir découvrir ou redécouvrir</h4>
-            <!-- <div class="carousel">
-                <div class="item-kind">
-                    <img src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="" class="img-kind">
-                    <p class="title-kind">PoP</p>
->>>>>>> yamina
             </div>
-            </div> -->
-
         </div>
+
         <div id="podcast">
             <h3><span class="lightblue">Revivez </span> vos emissions préférées</h3>
             <div class="carousel">
-<<<<<<< HEAD
-=======
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
-                <img class="img-podcast" src="https://image.shutterstock.com/image-illustration/musician-guitar-rock-guitarist-player-260nw-1112534567.jpg" alt="votre podcast affaires sensibles">
->>>>>>> yamina
             </div>
         </div>
 
@@ -194,6 +156,18 @@
         </div>
     </footer>
     <div id="lecteur">
+       
+        <div id="desciption" class="description">
+            
+        </div>
+        <div class="lecteur-col">
+            
+            <img class = "button-previous" src="icons/disabled-previous.svg" alt="disabled-previous button">
+            <div class="blue-circle">
+                <img id="button-play" class="icon-play" src="icons/play.svg" alt="icon play-pause">
+            </div>
+            <img class = "button-previous" src="icons/disabled-next.svg" alt="disabled-next button">
+        </div>
 
     </div>
 
@@ -205,17 +179,17 @@
             appId: '505122',
             channelUrl: 'https://yaminaj.promo-93.codeur.online/projet_data_deezer/channel.php',
             player: {
-                container: 'lecteur',
-                width: 800,
-                height: 100,
+                //container: 'lecteur',
+                // width: 800,
+                // height: 100,
                 onload: function() {
-                    
+
                 }
             }
         });
     </script>
 
-   
+
     <script src="script.js"></script>
 </body>
 

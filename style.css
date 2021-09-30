@@ -1,14 +1,15 @@
 /* Eléments généraux */
+img{
+    /* pointer-events: none; */
+}
 html{
     background-color: #0b5b6d;
     align-items: center;
-
 }
 body{
     max-width: 1440px;
     color: white;
     margin: auto;
-
 }
 header{
  margin: 0px;
@@ -16,8 +17,7 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-   
+    align-items: center;   
 }
 nav{
     color: #3bc8e7;
@@ -34,7 +34,6 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
     width: 40%;
     grid-row-gap: 70px;
 }
@@ -46,7 +45,6 @@ nav{
     -o-background-size: cover;
     background-size: cover;
 }
-
 #btn-menu-burger{
     width: 65px;
     height: 65px;
@@ -72,8 +70,6 @@ nav{
     width: 13px;
     background-color: white;
 }
-
-
 .btn-logo-appli{
     width: 65px;
     height: 65px;
@@ -119,7 +115,6 @@ nav{
     background-color: #F0F5F9;
     height: 40px;
     width: 300px;
-
 }
 #div-research input{
     /* margin-left: 20px; */
@@ -131,7 +126,6 @@ nav{
     width: 80%;
     height:90%;
 }
-
 .blue-square{
     display: flex;
     align-items: center;
@@ -141,7 +135,6 @@ nav{
     background-color: #3bc8e7;
     border-radius: 10%;
 }
-
 #identify{
     width: 20%;
     display: flex;
@@ -153,7 +146,6 @@ nav{
     width: 31px;
     border-radius: 100%;
 }
-
 #header-main{
     display: flex;
     flex-direction: column;
@@ -174,7 +166,6 @@ nav{
     color: #F0F5F9;
     margin-bottom: 20px;
 }
-
 .blue-button{
     text-transform: uppercase;
     font-family: OpenSansBold;
@@ -190,7 +181,6 @@ nav{
     border: solid 3px #3bc8e7;
     margin-left: 4px;
 }
-
 h1{
     font-size: 96px;
     font-family: UrbanistBlack;
@@ -202,15 +192,10 @@ h1{
     margin: auto;
     width: 60%;
     height: auto;
-
-}
-div{
-    /* border: solid 1px red; */
 }
 p{
     margin: 0px;
 }
-
 /* Footer */
 footer{
     display: flex;
@@ -223,6 +208,7 @@ footer{
     background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
     padding-bottom: 60px;
     font-size: 14px;
+    margin-bottom: 104px;
 }
 .footer-col{
     width: 22%;
@@ -234,7 +220,6 @@ footer{
 footer :is(.line-sound-1, .line-sound-2, .line-sound-3, .line-sound-4, .line-sound-5, .line-sound-6, .line-sound-7){
     background-color: white;
 }
-
 footer .btn-logo-appli{
     background-color: #3bc7e700;
     align-items: start;
@@ -247,11 +232,9 @@ h3{
     margin-bottom: 0px;
     letter-spacing: 1px;
 }
-
 footer .blue-sub-title{
     color: #F0F5F9;
 }
-
 .footer-col input{
     /* margin-left: 20px; */
     /* margin-right: 20px; */
@@ -262,9 +245,7 @@ footer .blue-sub-title{
     width: 100%;
     height:36px;
     padding-left: 20px;
-
 }
-
 footer .blue-button{
     background-color: #3bc8e7;
     width: 60%;
@@ -286,14 +267,29 @@ footer .blue-button{
 .margin-bot{
     margin-bottom: 60px;
 }
-
 #lecteur{
+    display: flex;
+    justify-content: space-evenly;
     width: 100%;
-    height: 75px;
+    height: 125px;
     background-color: #111013;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
 }
-
-
+.lecteur-col{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.description{
+    width: 650px;
+}
+.button-previous{
+    padding: 10px;
+    width : 30px;
+}
 /* KIND */
 #kind{
     padding-left: 90px;
@@ -310,12 +306,10 @@ footer .blue-button{
     overflow-x: auto;
     overflow: hidden;
     margin-top: 30px;
-
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
-
 }
 .item-kind{
     width: 184px;
@@ -324,14 +318,12 @@ footer .blue-button{
 .img-kind{
     width: 184px;
     height: 184px;
-
 }
 .title-kind{
     font-family: UrbanistBold;
     font-size: 14px;
     color: white;
 }
-
 /* Top10 */
 #top-10{
     width : 100%;
@@ -358,33 +350,16 @@ footer .blue-button{
     flex-wrap: wrap;
     padding-top: 15px;
     margin-bottom: 10px;
-<<<<<<< HEAD
-    transition: 500ms ease-in-out;
-}
-
-.item-music:hover{
-    /* padding: 10px; */
-    padding-left: 20px;
-
-    /* background-color: red; */
-=======
     transition: 400ms ease-in-out;
     position: relative;
     cursor: pointer;
 }
-
 .item-music:hover .white-line{
     height: 82px;
     top: -4px;
     background-color: #3bc8e7;
     opacity: 0.2;
-
->>>>>>> Francis
 }
-/* .item-music:hover{
-    padding-left: 20px;
-} */
-
 .en-pause{
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
@@ -398,14 +373,12 @@ footer .blue-button{
     top: 80px;
     transition: 0.5s;
 }
-
 @keyframes music-item-anim{
     0%   {opacity: 0.2;}
     20% {height:20px; top: 80px; opacity: 0.2;}
     40% {height:0px; top: 80px; opacity: 0.2;}
     100% {background-color: #3bc8e7; height:82px; top:-4px; opacity: 0.2;}
 }
-
 .number{
     font-family: UrbanistBold;
     font-size: 14px;
@@ -414,7 +387,6 @@ footer .blue-button{
 .img-music{
     width: 60px;
     height: 60px;
-
 }
 .info-music{
     width: 60%;
@@ -439,10 +411,7 @@ footer .blue-button{
     font-family: UrbanistLight;
     letter-spacing: 1px;
 }
-
-
 /* Artist du moment  */
-
 h2{
     color: white;
     font-family: Roboto;
@@ -456,12 +425,7 @@ h2{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-<<<<<<< HEAD
-    background: url("images/accueil-nana.png") no-repeat center center;
-=======
-    
->>>>>>> yamina
+    justify-content: end; 
 }
 .player-artist{
     display: flex;
@@ -474,7 +438,6 @@ h2{
     width: 76px;
     border-radius: 100%;
     background-color: #3bc8e7;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -482,18 +445,18 @@ h2{
 }
 .icon-play{
     margin-left: 8px;
-
 }
-
+.icon-pause{
+    align-items: center;
+    justify-content: center;
+}
 /* Top playlist */
 #playlist{
     padding-left: 90px;
     padding-top: 30px;
     padding-bottom: 30px;
     background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
-
 }
-
 /* Podcast */
 #podcast{
     /* width: 100%; */
@@ -501,9 +464,7 @@ h2{
     padding-bottom: 80px;
     padding-left: 90px;
     padding-top: 20px;
-
     background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(42, 42, 42) 100%);
-
 }
 #podcast h3{
     margin-bottom: 30px;
@@ -547,7 +508,6 @@ h2{
     font-family: UrbanistLight;
 }
 
-
 .lightblue{
     color: #3bc8e7;
 }
@@ -571,8 +531,6 @@ button, input[type="submit"], input[type="reset"] {
     align-items: center;
     row-gap: 15px;
 }
-
-
 @media screen and (max-width:1024px){
     .blue-sub-title{
         display: none;
@@ -601,7 +559,6 @@ button, input[type="submit"], input[type="reset"] {
     }
 
 }
-
 @media screen and (max-width:768px){
     #kind, #playlist, #podcast{
         padding-left: 20px;
