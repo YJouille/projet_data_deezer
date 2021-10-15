@@ -271,6 +271,7 @@ footer .blue-button{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    max-width: 1440px;
     height: 125px;
     background-color: #111013;
     align-items: center;

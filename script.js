@@ -1,5 +1,5 @@
 // kind music
-const urlGenre = "https://api.deezer.com/genre";
+const urlGenre = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
 let requeteGenre = new XMLHttpRequest();
 requeteGenre.open("GET", urlGenre);
 requeteGenre.responseType ="json";
@@ -39,7 +39,7 @@ requeteGenre.onload = function(){
 }
 
 // podcast radio
-const urlPodcast = "https://api.deezer.com/chart/podcast";
+const urlPodcast = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/podcast";
 let requetePodcast = new XMLHttpRequest();
 requetePodcast.open("GET", urlPodcast);
 requetePodcast.responseType ="json";
@@ -83,8 +83,8 @@ requetePodcast.onload = function(){
 /*************** Top 10 tracks and top 10 albums ***************/
 // Top 10 tracks and top 10 albums
 // Declaration variables
-const urlTracks = "https://api.deezer.com/chart/tracks";
-const urlAlbums = "https://api.deezer.com/chart/albums";
+const urlTracks = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/tracks";
+const urlAlbums = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/albums";
 let top10Tracks = document.getElementById("top-10-tracks");
 let top10Albums = document.getElementById("top-10-albums");
 
@@ -217,7 +217,7 @@ getTop10Albums(urlAlbums);
 
 
 /*************** Artist of the moment ***************/
-const urlArtist = "https://api.deezer.com/chart/artists";
+const urlArtist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/artists";
 let artistOfMoment = document.getElementById("artist-of-moment");
 
 //Declaration des fonctions
@@ -302,7 +302,7 @@ function oneSlider(slider){
 }
 /*************** Top of playlists ***************/
 //Declaration des variables
-const urlPlaylist = "https://api.deezer.com/chart/playlists";
+const urlPlaylist = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/playlists";
 let playList = document.getElementById("playlist");
 //Declaration des fonctions
 
